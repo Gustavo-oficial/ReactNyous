@@ -6,9 +6,9 @@ import Login from './pages/login'
 import Cadastrar from './pages/cadastrar';
 import Eventos from './pages/eventos';
 import NaoEncontrada from './pages/naoencontrada';
-import Dashboard from './pages/admin/dashboard';
-import CrudCategorias from './pages/admin/crudcategorias';
-import CrudEventos from './pages/admin/crudeventos';
+import Dashboard from './pages/administrador/dashboard';
+import CrudCategorias from './pages/administrador/crudcategorias';
+import CrudEventos from './pages/administrador/crudeventos';
 import jwt_decode from 'jwt-decode';
 import SemPermissao from './pages/sempermissao';
 import * as serviceWorker from './serviceWorker';
@@ -46,9 +46,9 @@ const routing = (
           <Route path='/login' component={Login} />
           <Route path='/cadastrar' component={Cadastrar} />
           <RotaPrivada path='/eventos' component={Eventos} />
+          <RotaPrivadaAdministrador path='/administrador/crudcategorias' component={CrudCategorias} />
+          <RotaPrivadaAdministrador path='/administrador/crudeventos' component={CrudEventos} />
           <RotaPrivadaAdministrador path='/administrador/dashboard' component={Dashboard} />
-          <RotaPrivadaAdministrador path='/administrador/categorias' component={CrudCategorias} />
-          <RotaPrivadaAdministrador path='/administrador/eventos' component={CrudEventos} />
           <Route path='/sempermissao' component={SemPermissao} />
           <Route component={NaoEncontrada} />
         </Switch>

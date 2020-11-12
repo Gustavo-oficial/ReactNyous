@@ -5,14 +5,14 @@ import jwt_decode from 'jwt-decode';
 
 const Menu = () => {
 
-    const history = useHistory();
+    
 
     const sair = (event) => {
         event.preventDefault();
 
         localStorage.removeItem('token-nyous');
 
-        history.push('/');
+        
     }
 
     const renderMenu = () => {
